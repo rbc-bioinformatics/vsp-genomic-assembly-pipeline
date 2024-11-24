@@ -107,7 +107,7 @@ Or:
 bash illumina_vsp_fastp.sh
 ```
 
-# Notes
+## Notes
 Target Reference Genomes: 
 
 Depending on your study, download and specify the appropriate reference genome from databases like NCBI-Virus. Use accession numbers with the RefSeq tag for the most accurate sequences.
@@ -122,5 +122,5 @@ Variant Detection:
 Use iVar for standard variant detection or LoFreq for high-sensitivity calls.
 Variant data helps track mutations, single nucleotide polymorphisms (SNPs), and other genome alterations.
 
-# License
+## License
 This pipeline is open-source and distributed under the MIT License. Contributions and feedback are welcome!
