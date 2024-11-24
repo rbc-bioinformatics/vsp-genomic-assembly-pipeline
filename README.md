@@ -29,6 +29,23 @@ The pipeline is optimized for hybrid-capture sequencing, which requires less rea
 
 ---
 
+## Prerequisites
+
+### Tools Required
+
+- **fastp**: For trimming and quality control of raw sequencing reads.
+- **Bowtie2**: For aligning reads to a host genome and filtering out host sequences.
+- **Samtools**: For handling SAM/BAM files produced by `Bowtie2`.
+- **minimap2**: For aligning the unmapped reads to the reference.
+- **LoFred**: For variant calling.
+- **ivar**: For variant calling and consensus sequence generation.
+        
+### Input Data
+
+- Raw Illumina sequencing reads in FASTQ format.
+
+---
+
 ## System Requirements
 
 To run the pipeline, the following system specifications are recommended:
@@ -45,17 +62,16 @@ To run the pipeline, the following system specifications are recommended:
 
 The pipeline follows a stepwise process:
 
-1. **Quality Control**:
+1.**FASTQ Files Preprocessing**
+   - Concatenates FASTQ files to prepare them for quality control.
+2. **Quality Control**:
    - Removes adapters and low-quality bases using **fastp** to ensure high-quality sequencing reads.
-2. **Host Genome Removal**:
+3. **Host Genome Removal**:
    - Filters out host sequences (e.g., human genome) using **Bowtie2**, retaining only viral reads for further analysis.
-3. **Non-host Read Classification**:
-   - Identifies viral and microbial sequences using **Kaiju**.
 4. **Genome Assembly**:
    - Maps reads to a reference genome using **minimap2**.
 5. **Processing Aligned Reads**:
    - Sorts and indexes mapped reads.
-   - Removes duplicates using **Picard** to improve variant calling accuracy.
 6. **Variant Calling**:
    - Identifies mutations using **iVar** or **LoFreq**, enabling insights into viral evolution.
 7. **Consensus Sequence Generation**:
