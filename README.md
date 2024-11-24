@@ -91,7 +91,9 @@ bash illumina_vsp_fastp.sh
 ```
 
 # Notes
-Target Reference Genomes: Depending on your study, download and specify the appropriate reference genome from databases like NCBI-Virus. Use accession numbers with the RefSeq tag for the most accurate sequences.
+Target Reference Genomes: 
+
+Depending on your study, download and specify the appropriate reference genome from databases like NCBI-Virus. Use accession numbers with the RefSeq tag for the most accurate sequences.
 
 Depth Considerations:
 
