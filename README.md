@@ -50,7 +50,7 @@ To run the pipeline, the following system specifications are recommended:
 - **Bowtie2**: For aligning reads to a host genome and filtering out host sequences.
 - **Samtools**: For handling SAM/BAM files produced by `Bowtie2`.
 - **minimap2**: For aligning the de-hosted reads to the reference.
-- **LoFred**: For variant calling.
+- **LoFreq**: For variant calling.
 - **ivar**: For variant calling and consensus sequence generation.
         
 ### Input Data
