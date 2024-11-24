@@ -8,6 +8,7 @@ The **Illumina Viral Surveillance Panel (VSP) Pipeline** enables reference-based
 
 - [Overview](#overview)
 - [System Requirements](#system-requirements)
+- [Prerequisites](#prerequisites)
 - [Workflow](#workflow)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -29,23 +30,6 @@ The pipeline is optimized for hybrid-capture sequencing, which requires less rea
 
 ---
 
-## Prerequisites
-
-### Tools Required
-
-- **fastp**: For trimming and quality control of raw sequencing reads.
-- **Bowtie2**: For aligning reads to a host genome and filtering out host sequences.
-- **Samtools**: For handling SAM/BAM files produced by `Bowtie2`.
-- **minimap2**: For aligning the unmapped reads to the reference.
-- **LoFred**: For variant calling.
-- **ivar**: For variant calling and consensus sequence generation.
-        
-### Input Data
-
-- Raw Illumina sequencing reads in FASTQ format.
-
----
-
 ## System Requirements
 
 To run the pipeline, the following system specifications are recommended:
@@ -55,6 +39,23 @@ To run the pipeline, the following system specifications are recommended:
 - **Memory**: 16 GB RAM or more
 - **Storage**: 500 GB or more
 - **Tools**: Ensure the required tools (e.g., fastp, Bowtie2, Samtools, minimap2, iVar or LoFreq) are installed and accessible.
+
+---
+
+## Prerequisites
+
+### Tools Required
+
+- **fastp**: For trimming and quality control of raw sequencing reads.
+- **Bowtie2**: For aligning reads to a host genome and filtering out host sequences.
+- **Samtools**: For handling SAM/BAM files produced by `Bowtie2`.
+- **minimap2**: For aligning the de-hosted reads to the reference.
+- **LoFred**: For variant calling.
+- **ivar**: For variant calling and consensus sequence generation.
+        
+### Input Data
+
+- Raw Illumina sequencing reads in FASTQ format.
 
 ---
 
