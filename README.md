@@ -97,7 +97,7 @@ The pipeline follows a stepwise process:
 
 ## Usage
 
-Place your raw sequencing data (FASTQ files) in the same directory as the pipeline scripts and reference genomes directory. To run the entire pipeline, execute the following command:
+Place your raw sequencing data (FASTQ files) in the "vsp-genomic-assembly-pipeline" directory. To run the entire pipeline, execute the following command:
 
 ```bash
 ./illumina_vsp_fastp.sh
