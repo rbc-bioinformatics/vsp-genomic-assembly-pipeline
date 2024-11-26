@@ -2,7 +2,7 @@
 #!/bin/bash
 
 : << 'EOF'
-Note: Before running the pipeline you need to have your fastq files and all scripts in the same directory
+Note: Before running the pipeline you need to have your fastq files  in the scripts directory
 EOF
 
 # Define color variables
@@ -24,14 +24,13 @@ EOF
 
 # Define directories
 WORKING_DIR=$(pwd)
-SCRIPTS_DIR="$WORKING_DIR/scripts"
 CLEAN_READS="$WORKING_DIR/cleanReads"
 FASTP_OUT_DIR="$WORKING_DIR/fastp_out"
 READS_DIR="$WORKING_DIR/reads_dir"
 RAW_READS_DIR="$WORKING_DIR/raw_reads"
 
 # Create directories
-mkdir -p "$SCRIPTS_DIR" "$CLEAN_READS" "$FASTP_OUT_DIR" "$READS_DIR" "$RAW_READS_DIR"
+mkdir -p "$CLEAN_READS" "$FASTP_OUT_DIR" "$READS_DIR" "$RAW_READS_DIR"
 
 ### STEP 1
 echo ""
@@ -123,6 +122,3 @@ SECONDS=$((DURATION % 60))
 echo "===================================================="
 
 echo -e "${GREEN} Analysis Total Duration: ${HOURS}h ${MINUTES}m ${SECONDS}s ${RESET}"
-
-# Move scripts to the scripts directory
-mv *sh "$SCRIPTS_DIR"
