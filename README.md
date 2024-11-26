@@ -90,7 +90,7 @@ The pipeline follows a stepwise process:
 
 2. Ensure all scripts have executable permissions:
     ```bash
-    chmod +x scripts/*.sh
+    chmod +x *.sh
     ```
 
 ---

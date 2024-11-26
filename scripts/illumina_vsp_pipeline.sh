@@ -24,13 +24,14 @@ EOF
 
 # Define directories
 WORKING_DIR=$(pwd)
+SCRIPTS_DIR="$WORKING_DIR/scripts"
 CLEAN_READS="$WORKING_DIR/cleanReads"
 FASTP_OUT_DIR="$WORKING_DIR/fastp_out"
 READS_DIR="$WORKING_DIR/reads_dir"
 RAW_READS_DIR="$WORKING_DIR/raw_reads"
 
 # Create directories
-mkdir -p "$CLEAN_READS" "$FASTP_OUT_DIR" "$READS_DIR" "$RAW_READS_DIR"
+mkdir -p "$SCRIPTS_DIR" "$CLEAN_READS" "$FASTP_OUT_DIR" "$READS_DIR" "$RAW_READS_DIR"
 
 ### STEP 1
 echo ""
