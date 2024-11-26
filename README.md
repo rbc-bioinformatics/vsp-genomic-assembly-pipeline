@@ -38,7 +38,7 @@ To run the pipeline, the following system specifications are recommended:
 - **Processor**: Core i7 or higher
 - **Memory**: 16 GB RAM or more
 - **Storage**: 500 GB or more
-- **Tools**: Ensure the required tools (e.g., fastp, Bowtie2, Samtools, minimap2, iVar or LoFreq) are installed and accessible.
+- **Tools**: Ensure the required tools (e.g., fastp, Bowtie2, Samtools, minimap2, iVar) are installed and accessible.
 
 ---
 
@@ -50,7 +50,6 @@ To run the pipeline, the following system specifications are recommended:
 - **Bowtie2**: For aligning reads to a host genome and filtering out host sequences.
 - **Samtools**: For handling SAM/BAM files produced by `Bowtie2`.
 - **minimap2**: For aligning the de-hosted reads to the reference.
-- **LoFreq**: For variant calling. **(Optional)**
 - **ivar**: For variant calling and consensus sequence generation.
         
 ### Input Data
@@ -74,7 +73,7 @@ The pipeline follows a stepwise process:
 5. **Processing Aligned Reads**:
    - Sorts and indexes mapped reads.
 6. **Variant Calling**:
-   - Identifies mutations using **iVar** or **LoFreq**, enabling insights into viral evolution.
+   - Identifies mutations using **iVar**, enabling insights into viral evolution.
 7. **Consensus Sequence Generation**:
    - Produces a consensus sequence, critical for downstream analysis like phylogenetic studies or outbreak tracking.
 
@@ -119,7 +118,7 @@ For tiling-based sequencing, increase the minimum depth for consensus calling to
 
 Variant Detection:
 
-Use iVar for standard variant detection or LoFreq for high-sensitivity calls.
+Use iVar for standard variant detection.
 Variant data helps track mutations, single nucleotide polymorphisms (SNPs), and other genome alterations.
 
 ## License
