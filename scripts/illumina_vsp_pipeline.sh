@@ -2,7 +2,7 @@
 #!/bin/bash
 
 : << 'EOF'
-Note: Before running the pipeline you need to have your fastq files  in the scripts directory
+Note: Before running the pipeline you need to have your fastq files in the "vsp-genomic-assembly-pipeline" directory
 EOF
 
 # Define color variables
