@@ -15,10 +15,10 @@ EOF
 # define directories
 WORKING_DIR=$(pwd)
 NON_HOST_READS_DIR="$WORKING_DIR/nonHost"
-HUMAN_REF_DIR="$WORKING_DIR/reference_genomes/human"
+MVD_REF_DIR="$WORKING_DIR/reference_genomes/mvd"
 
-# define the reference genome
-mvd_reference="$HUMAN_REF_DIR/NC_001608.3.fna"
+# Define the reference genome:
+mvd_reference="$MVD_REF_DIR/NC_001608.3.fna"
 
 for sorted_mapped_bam_file in "$NON_HOST_READS_DIR"/*.sorted.mapped.bam; do
   sample=$(basename "$sorted_mapped_bam_file" .sorted.mapped.bam)
