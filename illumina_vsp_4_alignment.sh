@@ -18,10 +18,10 @@ EOF
 WORKING_DIR=$(pwd)
 NON_HOST_READS_DIR="$WORKING_DIR/nonHost"
 UNMAPPED_READS_DIR="$NON_HOST_READS_DIR/unmapped_reads"
-HUMAN_REF_DIR="$WORKING_DIR/reference_genomes/human"
+MVD_REF_DIR="$WORKING_DIR/reference_genomes/mvd"
 
 # Define the reference genome:
-mvd_reference="$HUMAN_REF_DIR/NC_001608.3.fna"
+mvd_reference="$MVD_REF_DIR/NC_001608.3.fna"
 
 for unmapped_forward_read in "$UNMAPPED_READS_DIR"/*_reads_unmapped.1.fastq; do
   sample=$(basename "$unmapped_forward_read" _reads_unmapped.1.fastq)
