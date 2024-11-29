@@ -1,0 +1,1 @@
+The human reference genome will be automatically downloaded by the pipeline.
