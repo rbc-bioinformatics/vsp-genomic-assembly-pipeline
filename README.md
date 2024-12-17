@@ -25,6 +25,7 @@ This pipeline provides an automated bioinformatics workflow for analyzing Illumi
 - Remove host genome sequences.
 - Assemble viral genomes.
 - Identify variants and generate consensus sequences.
+  
 
 The pipeline is optimized for hybrid-capture sequencing, which requires less read depth compared to shotgun metagenomics and offers higher mutation detection accuracy than amplicon sequencing.
 
